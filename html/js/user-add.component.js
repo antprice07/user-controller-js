@@ -2,33 +2,16 @@ let user = null;
 
 $().ready(() => {
 
-    let parms = getUrlParms();
 
-    get(parms.id)
-        .done((res) => {
-            user = res.data;
-            console.log(user);
-            display(user);
-        })
-
-    $("#edit").click(() => {
-        window.location=`user-edit.component.html?id=${user.id}`;
-    })
-
-    $("#delete").click(()=>{
-        remove(user)
-            .done((res)=>{
-                user = res.data;
-                console.log(`Deleted ${user}`);
-                window.location="user-list.component.html";
-            })
+    $("#save").click(() => {
+        save();
     })
 
 })
 
 const save = () => {
     let user = {};
-    user.id=$("#pid").val();
+    user.id=0;
     user.username = $("#uname").val();
     user.password = $("#pword").val();
     user.firstName = $("#fname").val();
@@ -37,9 +20,9 @@ const save = () => {
     user.email = $("#email").val();
     user.reviewer = $("#reviewer").prop("checked");
     user.admin = $("#admin").prop("checked");
-    change(user)
+    insert(user)
         .done((res) => {
-            console.log("Change:",res);
+            console.log("New user:",res);
             window.location = "user-list.component.html";
         })
         .fail((err)=>{

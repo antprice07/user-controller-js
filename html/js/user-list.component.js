@@ -9,6 +9,10 @@ $().ready(()=>{
             display(users)
     });
 
+    $("#add").click(()=>{
+        document.location.href="user-add.component.html";
+    });
+
 });
 
 const display = (users) => {

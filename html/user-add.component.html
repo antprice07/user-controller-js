@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>User Detail</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>User Edit</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="js/getUrlParms.js"></script>
     <script src="js/user.service.js"></script>
-    <script src="js/user-detail.component.js"></script>
+    <script src="js/user-add.component.js"></script>
+    <link rel="stylesheet" href="css/user-add.component.css">
 </head>
+
 <body>
-    <h3>User Detail | <a href="user-list.component.html">Return to User List</a></h3>
+    <h3>User Add</h3>
     <table class="table table-sm">
         <tbody id="tbody">
             <tr>
@@ -21,43 +24,43 @@
             </tr>
             <tr>
                 <td>Username:</td>
-                <td><input id="uname" type="text" size="30" disabled></td>
+                <td><input id="uname" type="text" size="30"></td>
             </tr>
             <tr>
                 <td>Password:</td>
-                <td><input id="pword" type="password" size="30" disabled></td>
+                <td><input id="pword" type="password" size="30"></td>
             </tr>
             <tr>
                 <td>First Name:</td>
-                <td><input id="fname" type="text" size="30" disabled></td>
+                <td><input id="fname" type="text" size="30"></td>
             </tr>
             <tr>
                 <td>Last Name:</td>
-                <td><input id="lname" type="text" size="30" disabled></td>
+                <td><input id="lname" type="text" size="30"></td>
             </tr>
             <tr>
                 <td>Phone Number:</td>
-                <td><input id="phone" type="text" size="30" disabled></td>
+                <td><input id="phone" type="text" size="30"></td>
             </tr>
             <tr>
                 <td>Email:</td>
-                <td><input id="email" type="text" size="30" disabled></td>
+                <td><input id="email" type="text" size="30"></td>
             </tr>
             <tr>
                 <td>Reviewer:</td>
-                <td><input id="reviewer" type="checkbox" disabled></td>
+                <td><input id="reviewer" type="checkbox"></td>
             </tr>
             <tr>
                 <td>Admin:</td>
-                <td><input id="admin" type="checkbox" disabled></td>
+                <td><input id="admin" type="checkbox"></td>
             </tr>
             <tr>
                 <td colspan="2">
-                    <button id="edit" class="btn btn-warning">Edit</button> |
-                    <button id="delete" class="btn btn-danger">Delete</button>
+                    <button id="save" class="btn btn-primary">Save</button>
                 </td>
             </tr>
         </tbody>
     </table>
 </body>
+
 </html>
